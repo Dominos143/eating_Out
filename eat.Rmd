@@ -52,6 +52,13 @@ colPerc(table1)
 
 The numerical data results confirm what is seen in the graphical data, there is a large percent(<10%) between the rates at which the black and the white/other race(s) eat out. However the large percent of the total people who either do or do not eat out being white confirms that the white race sample size is massively larger than the other two race(s).
 
+```{r}
+fisherXY(mydata$race,mydata$eatout, printAll = TRUE)
+```
 
+The p-values in the fisherXY inferential test show a slightly different result than the numerical or graphical data. The large p-value(0.2815) and the 95% confidence interval including 1 in the comparison between the black and other race(s) shows that the difference shown between them in the numerical and graphical data is superficial and does not represent a significant difference in actuality. The inferential data does however confirm the difference between the black and white races with the p-value of their comparison (0.0003864) and the confidence interval not including 1 allows for the rejection of the Null hypothesis for this comparison. The graphical and numerical data were also a somewhat accurate representation of the comparison between the white and other race(s) with the similarities seen in both being confirmed by the relatively large p-value (0.3543) and their comparisons 95% confidence interval including 1 which indicates the Null hypothesis can be accepted for this comparison.
 
+## Discussion and Conclusion
+
+The process of downloading and importing the GSS data set from NORC was a bit un-intuitive, particularly the recent change in the way STATA files are read into the r-program. The graphical and numerical data presented a poor overall analysis of the data, likely due to the massively larger sample size of the white race versus the other two races, even when combined. The inferential analysis of the data shows the differences shown in the numerical and graphical data between the black and other race(s) is superficial and not an actually significant difference.
 
